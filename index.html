@@ -7,18 +7,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div id="app">
+        <h1>Lista di Email</h1>
+        <!-- Lista di email generata con Vue.js -->
+        <ul v-if="allEmailsGenerated">
+            <li v-for="(email, index) in emails" :key="index">{{ email }}</li>
+        </ul>
+        <!-- Messaggio di caricamento -->
+        <p v-else>Caricamento delle email...</p>
+    </div>
 
-
-
-
-    
-    
-    
-    <!--  Vue.js-->
+    <!-- Carica Vue.js dal CDN -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <!--  Axios  -->
+    <!-- Carica Axios dal CDN -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <!-- file JavaScript -->
+    <!-- Includi il tuo file JavaScript -->
     <script src="js/script.js"></script>
 
     
